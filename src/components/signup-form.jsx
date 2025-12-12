@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Field, FieldDescription, FieldGroup } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import Sum from "@/app/icons/sum";
+import Sum from "@/app/icons/Sum";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Checkbox } from "./ui/checkbox";

@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import NomNom from "./icons/NomNom";
 import { useEffect, useState } from "react";
-import Sum from "./icons/Sum";
 import Cum from "./icons/Cum";
 import Loc from "./icons/Loc";
 export function Header() {

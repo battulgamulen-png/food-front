@@ -9,7 +9,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import Sum from "@/app/icons/sum";
+import Sum from "@/app/icons/Sum";
 import { useRouter } from "next/navigation"; // ✅ App Router version
 import { useState } from "react";
 import axios from "axios";
