@@ -2,74 +2,112 @@ import NomNom from "./icons/NomNom";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1B1B1B] text-white pt-16 pb-10 px-6">
-      {/* Top red bar */}
-      <div className="bg-[#E74C3C] w-full text-white py-3 text-center text-lg font-medium">
+    <footer className="bg-[#1B1B1B] text-white pt-16 pb-12 px-6">
+      {/* Top Red Bar */}
+      <div className="bg-[#E74C3C] w-full py-3 text-center text-lg font-semibold tracking-wide">
         Fresh fast delivered &nbsp;·&nbsp; Fresh fast delivered &nbsp;·&nbsp;
         Fresh fast delivered
       </div>
 
-      {/* Content */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mt-10">
+      {/* Main Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mt-12">
         {/* Logo Section */}
-        <div>
-          <div className="flex items-center space-x-3">
-            <div>
-              <NomNom />
-              <div className="text-xl font-semibold">NomNom</div>
-              <div className="text-sm text-gray-300">Swift delivery</div>
-            </div>
-          </div>
+        <div className="flex flex-col items-start space-y-3">
+          <NomNom />
+          <div className="text-2xl font-bold">NomNom</div>
+          <div className="text-sm text-gray-300">Swift delivery</div>
         </div>
 
-        {/* Nomnom Links */}
+        {/* NomNom Links */}
         <div>
-          <h3 className="text-gray-400 mb-4">NOMNOM</h3>
+          <h3 className="text-gray-400 mb-4 font-semibold tracking-wide uppercase text-sm">
+            NOMNOM
+          </h3>
           <ul className="space-y-2 text-sm">
-            <li>Home</li>
-            <li>Contact us</li>
-            <li>Delivery zone</li>
+            {["Home", "Contact us", "Delivery zone"].map((item) => (
+              <li
+                key={item}
+                className="hover:text-white cursor-pointer transition-colors duration-200"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Menu Links */}
         <div>
-          <h3 className="text-gray-400 mb-4">MENU</h3>
+          <h3 className="text-gray-400 mb-4 font-semibold tracking-wide uppercase text-sm">
+            MENU
+          </h3>
           <ul className="space-y-2 text-sm">
-            <li>Appetizers</li>
-            <li>Salads</li>
-            <li>Pizzas</li>
-            <li>Main dishes</li>
-            <li>Desserts</li>
+            {["Appetizers", "Salads", "Pizzas", "Main dishes", "Desserts"].map(
+              (item) => (
+                <li
+                  key={item}
+                  className="hover:text-white cursor-pointer transition-colors duration-200"
+                >
+                  {item}
+                </li>
+              )
+            )}
           </ul>
         </div>
 
-        {/* Right Menu */}
+        {/* Right Menu + Social */}
         <div>
-          <h3 className="text-gray-400 mb-4">MENU</h3>
+          <h3 className="text-gray-400 mb-4 font-semibold tracking-wide uppercase text-sm">
+            MENU
+          </h3>
           <ul className="space-y-2 text-sm">
-            <li>Side dish</li>
-            <li>Brunch</li>
-            <li>Desserts</li>
-            <li>Beverages</li>
-            <li>Fish & Sea foods</li>
+            {[
+              "Side dish",
+              "Brunch",
+              "Desserts",
+              "Beverages",
+              "Fish & Sea foods",
+            ].map((item) => (
+              <li
+                key={item}
+                className="hover:text-white cursor-pointer transition-colors duration-200"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
 
-          <h3 className="text-gray-400 mt-8 mb-3">FOLLOW US</h3>
-          <div className="flex flex-row w-[28px] h-[28px]">
-            <img src="./Facebook.png" />
-            <img src="./Instagram.png" />
+          <h3 className="text-gray-400 mt-8 mb-3 font-semibold tracking-wide uppercase text-sm">
+            FOLLOW US
+          </h3>
+          <div className="flex space-x-4">
+            <img
+              src="./Facebook.png"
+              alt="Facebook"
+              className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+            />
+            <img
+              src="./Instagram.png"
+              alt="Instagram"
+              className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+            />
           </div>
         </div>
       </div>
 
       {/* Bottom Line */}
-      <div className="border-t border-gray-600 mt-10 pt-6 flex flex-wrap justify-between text-sm text-gray-400 max-w-6xl mx-auto">
-        <span>Copy right 2024 © Nomnom LLC</span>
-        <div className="flex space-x-6">
-          <span>Privacy policy</span>
-          <span>Terms and conditoin</span>
-          <span>Cookie policy</span>
+      <div className="border-t border-gray-600 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 max-w-6xl mx-auto gap-4 md:gap-0">
+        <span>© 2024 NomNom LLC. All rights reserved.</span>
+        <div className="flex flex-wrap gap-6">
+          {["Privacy policy", "Terms and condition", "Cookie policy"].map(
+            (item) => (
+              <span
+                key={item}
+                className="hover:text-white cursor-pointer transition-colors duration-200"
+              >
+                {item}
+              </span>
+            )
+          )}
         </div>
       </div>
     </footer>
